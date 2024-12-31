@@ -1,15 +1,16 @@
 import './App.css';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import EmpForm from './Components/EmpForm';
+import EmployForm from './Components/EmployForm';
 
 
 function App() {
   
   return (
     <>
-      <EmpForm/>
+     <EmployForm/>
     </>
   );
-}
+};
 
 export default App;
