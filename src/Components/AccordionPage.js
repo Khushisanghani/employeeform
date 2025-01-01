@@ -7,12 +7,12 @@ function AccordionPage(){
         navigate("/")
     }
     const employees = JSON.parse(localStorage.getItem("employees"))||[];
-    const groupemploy=employees.reduce((acc,employee)=>{
-        if(!acc[employee.department]){
-            acc[employee.department]=[];
+    const groupemploy=employees.reduce((accordion,employee)=>{
+        if(!accordion[employee.department]){
+            accordion[employee.department]=[];
         }
-        acc[employee.department].push(employee);
-        return acc;
+        accordion[employee.department].push(employee);
+        return accordion;
     },{});
     return(
         <>
