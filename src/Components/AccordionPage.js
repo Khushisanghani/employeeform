@@ -8,6 +8,7 @@ function AccordionPage(){
     }
     const employees = JSON.parse(localStorage.getItem("employees"))||[];
     const groupemploy=employees.reduce((accordion,employee)=>{
+        // at a time one object /array show 
         if(!accordion[employee.department]){
             accordion[employee.department]=[];
         }
