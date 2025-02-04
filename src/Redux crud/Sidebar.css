@@ -1,0 +1,12 @@
+.nav-pill li a:hover{
+    background-color: rgb(95, 95, 103);
+}
+.sidebar{
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+}
+.content{
+    overflow: auto;
+    margin-left: 20%;
+}

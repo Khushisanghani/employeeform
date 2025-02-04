@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, Container, Form  } from "react-bootstrap";
 import EmployTable from "./EmployTable";
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 function EmployForm() {
@@ -88,7 +88,7 @@ function EmployForm() {
     <>
       <Container className='mt-2'>
         <h3 className="text-center">Employee Registration Form</h3>
-
+        
         <Form onSubmit={formik.handleSubmit} className="border shadow p-3 mb-5 bg-white rounded  ">
           {/* <FormInput Label='name' name='name' type='text' value={formData.name} onChange={handleChange} required/> */}
           <Form.Control 
@@ -141,10 +141,9 @@ function EmployForm() {
              
           <Form.Select name='department' value={formik.values.department} onChange={formik.handleChange} onBlur={formik.handleBlur} className="mb-2">
             <option>Choose Department</option>
-            <option value="Software Developer">Software Developer</option>
-            <option value="Web Developer">Web Developer</option>
-            <option value="Project Management">Project Management</option>
-            <option value="Database Administrator">Database Administrator</option>
+            <option value="Hr Department">Hr Department</option>
+            <option value="sale Department">sale Department</option>
+            <option value="Development Department">Development Department</option>
           </Form.Select>
           {formik.touched.department && formik.errors.department && <p style={{color:'red'}}>{formik.errors.department}</p>}
           

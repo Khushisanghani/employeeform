@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, Container, Form, Pagination, Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function EmployTable({ employees, handleEdit, handleDelete, setEmployees }) {
   const [Search, setSearch] = useState('');
@@ -50,6 +51,7 @@ function EmployTable({ employees, handleEdit, handleDelete, setEmployees }) {
   return (
     <><h2 className="text-center">Employee List</h2>
       <Container>
+      <Link to='/create' className="btn btn-success my-3">Create + </Link>
         <Form>
           <Form.Control
             type="text"

@@ -1,29 +1,29 @@
 import './App.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import SimpleForm from './Formik practice/SimpleForm';
-import EmployForm from './Components/EmployForm';
+import Sidebar from './Redux crud/Sidebar';
+import './Redux crud/Sidebar.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import EmployForm from './Components/EmployForm';
 import AccordionPage from './Components/AccordionPage';
-// import Practice from './Formik practice/Practice';
-// import { YupForm } from './Formik practice/YupForm';
-
-
-
-
-function App() {
-  
+function App() { 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<EmployForm/>}/>
-          <Route path="/list" element={<AccordionPage/>}/>
-        </Routes>
-      </BrowserRouter>
-    {/* <SimpleForm/> */}
-        {/* <Practice/> */}
-        {/* <YupForm/> */}
+      <div className='d-flex'>
+        <div className='d-flex flex-column sidebar'>
+          <Sidebar/>
+        </div>
+        <div className='content container'>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<EmployForm/>}/>
+              <Route path="/list" element={<AccordionPage/>}/>
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </div>
+      
+       
     </>
   );
 };
